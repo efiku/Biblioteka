@@ -3,19 +3,23 @@
 
 namespace Library {
 	using namespace std;
+
 	class Book
 	{
 	public:
 		Book();
+		Book(string bookName, string bookAuthor, unsigned int bookPublishYear, string bookISBN);
 		~Book();
-	private:
-		unsigned long id;
-		string bookName;
 
+		unsigned long getId();
+		string getName();
+	private:
+		unsigned int bookPublishYear;
+		string bookName;
 		string bookAuthor;
 		string bookIsbn;
-	public:
-		// Get Book id
-		string getId();
+		unsigned long bookId;
+	protected:
+		static unsigned long storedId;
 	};
 }
