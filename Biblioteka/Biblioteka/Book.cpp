@@ -14,6 +14,21 @@ namespace Library {
 		return bookName;
 	}
 
+	string Book::getAuthor()
+	{
+		return bookAuthor;
+	}
+
+	string Book::getISBN()
+	{
+		return bookIsbn;
+	}
+
+	unsigned int Book::getPublishYear()
+	{
+		return  bookPublishYear;
+	}
+
 	/*
 	 Book Entity
 	 @param Book Title string

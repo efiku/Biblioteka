@@ -13,6 +13,9 @@ namespace Library {
 
 		unsigned long getId();
 		string getName();
+		string getAuthor();
+		string getISBN();
+		unsigned int  getPublishYear();
 	private:
 		unsigned int bookPublishYear;
 		string bookName;
