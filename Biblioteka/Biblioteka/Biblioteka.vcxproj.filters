@@ -24,21 +24,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Book.cpp">
+    <ClCompile Include="Entity\Book.cpp">
       <Filter>Source Files\Entity</Filter>
     </ClCompile>
-    <ClCompile Include="BookRepository.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Entity\BookRepository.cpp">
+      <Filter>Source Files\Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BookRepositoryInterface.h">
+    <ClInclude Include="Entity\Book.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Book.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BookRepository.h">
+    <ClInclude Include="Entity\BookRepository.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

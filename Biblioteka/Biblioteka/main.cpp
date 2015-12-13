@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "Book.h"
-#include "BookRepository.h"
+#include "Entity\Book.h"
+#include "Entity\BookRepository.h"
 
 using namespace Library;
 int main() {

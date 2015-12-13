@@ -110,17 +110,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Book.h" />
-    <ClInclude Include="BookRepository.h" />
-    <ClInclude Include="BookRepositoryInterface.h" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Book.cpp" />
-    <ClCompile Include="BookRepository.cpp" />
+    <ClCompile Include="Entity\Book.cpp" />
+    <ClCompile Include="Entity\BookRepository.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Entity\Book.h" />
+    <ClInclude Include="Entity\BookRepository.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
