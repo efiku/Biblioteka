@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Entity">
       <UniqueIdentifier>{dcbc7a97-7532-45af-8024-08464731617e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Fixtures">
+      <UniqueIdentifier>{22c5f3b4-a02b-4853-b6fe-aec63770e08a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
@@ -30,12 +33,18 @@
     <ClCompile Include="Entity\BookRepository.cpp">
       <Filter>Source Files\Entity</Filter>
     </ClCompile>
+    <ClCompile Include="BooksFixturies.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity\Book.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Entity\BookRepository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BooksFixturies.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

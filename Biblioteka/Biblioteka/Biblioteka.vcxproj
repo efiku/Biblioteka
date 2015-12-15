@@ -113,11 +113,13 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BooksFixturies.cpp" />
     <ClCompile Include="Entity\Book.cpp" />
     <ClCompile Include="Entity\BookRepository.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BooksFixturies.h" />
     <ClInclude Include="Entity\Book.h" />
     <ClInclude Include="Entity\BookRepository.h" />
   </ItemGroup>

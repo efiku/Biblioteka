@@ -2,29 +2,20 @@
 #include <vector>
 #include "Entity\Book.h"
 #include "Entity\BookRepository.h"
+#include "BooksFixturies.h"
 
 using namespace Library;
 int main() {
-	 
-	vector<Book> booksCollection; 
-	vector<string> teksts = { "ala ", "ma", "kota", "a" , "kot" , "ma", "ale", "dd1", "dd2", "dd3"};
-	vector<string> authors = { "Krzysiek", "Tomek", "Krzysiek", "Karol" , "Karol" , "Krzysiek", "ale", "dd1", "dd2", "dd3" };
-
-	for (int index = 0; index < 10; index++) {
-		booksCollection.push_back(
-			Book( teksts[index], authors[index], 1995, "31-31134")
-			);
-	}
-
+	vector<Book> booksCollection = BooksFixturies::getFixturedBooks(15);
 	BookRepository bookRepository = BookRepository(booksCollection);
 
 
 
-	for each (Book book in bookRepository.findBy("Krzysiek") )
+	for each (Book book in bookRepository.getAllBooks())
 	{
-		cout << book.getId() << "  " << book.getName() << "\n";
+		cout << book.getId() << "  " << book.getName() << " " << book.getAuthor()  << " " << book.getPublishYear() << " " << book.getISBN() <<  "\n";
 	}
-	
+    
 	cin.get();
 	return 0;
 }
