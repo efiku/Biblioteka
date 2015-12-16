@@ -1,17 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Library::Book">
-    <Position X="8" Y="0.75" Width="1.5" />
+    <Position X="10.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAEAAAAAgAAABEAAQAAAAAAAAIIAAAgAAFAAAACgA=</HashCode>
-      <FileName>Book.h</FileName>
+      <FileName>Entity\Book.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Library::BookRepository">
-    <Position X="5.5" Y="0.75" Width="2.25" />
+    <Position X="7.75" Y="1.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAABAAAACAAAAAAAAACAAMAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BookRepository.h</FileName>
+      <FileName>Entity\BookRepository.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library::BooksFixturies">
+    <Position X="13" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgABAAAAAAAAAABAAAAAAAAAAACAABAAAAAAAAAAA=</HashCode>
+      <FileName>BooksFixturies.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library::InMemoryStorage" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAACAAAAEACCAAAAAAAAAAAAACAAAgAAEAAA=</HashCode>
+      <FileName>InMemoryStorage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library::StorageInterface">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAADAAAAEACAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>StorageInterface.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Tahoma" Size="8.25" />

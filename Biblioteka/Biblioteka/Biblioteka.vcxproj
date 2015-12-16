@@ -116,12 +116,16 @@
     <ClCompile Include="BooksFixturies.cpp" />
     <ClCompile Include="Entity\Book.cpp" />
     <ClCompile Include="Entity\BookRepository.cpp" />
+    <ClCompile Include="InMemoryStorage.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="StorageInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BooksFixturies.h" />
     <ClInclude Include="Entity\Book.h" />
     <ClInclude Include="Entity\BookRepository.h" />
+    <ClInclude Include="InMemoryStorage.h" />
+    <ClInclude Include="StorageInterface.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

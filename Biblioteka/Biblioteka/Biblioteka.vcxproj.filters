@@ -9,15 +9,18 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Source Files\Entity">
       <UniqueIdentifier>{dcbc7a97-7532-45af-8024-08464731617e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Fixtures">
       <UniqueIdentifier>{22c5f3b4-a02b-4853-b6fe-aec63770e08a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Storage">
+      <UniqueIdentifier>{ab3b3579-3f33-41d8-a4c7-4729f4c4013a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,7 +37,13 @@
       <Filter>Source Files\Entity</Filter>
     </ClCompile>
     <ClCompile Include="BooksFixturies.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Fixtures</Filter>
+    </ClCompile>
+    <ClCompile Include="StorageInterface.cpp">
+      <Filter>Source Files\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="InMemoryStorage.cpp">
+      <Filter>Source Files\Storage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BooksFixturies.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StorageInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InMemoryStorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
