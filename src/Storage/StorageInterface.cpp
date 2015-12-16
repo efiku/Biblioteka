@@ -2,7 +2,6 @@
 
 namespace Library {
 
-	StorageInterface::~StorageInterface()
-	{
-	}
+    StorageInterface::~StorageInterface() {
+    }
 }
