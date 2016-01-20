@@ -6,15 +6,16 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(SOURCE_FILES
         src/Entity/Book.cpp
         src/Entity/Book.h
-        src/Entity/BookRepository.cpp
-        src/Entity/BookRepository.h
         src/Fixtures/BooksFixtures.cpp
         src/Fixtures/BooksFixtures.h
-        src/Storage/InMemoryStorage.cpp
-        src/Storage/InMemoryStorage.h
         src/main.cpp
-        src/Storage/StorageInterface.cpp
-        src/Storage/StorageInterface.h
-)
+        src/Application/Application.cpp
+        src/Application/Application.h
+        src/Application/Command.cpp
+        src/Application/Command.h
+        src/Application/Database.cpp
+        src/Application/Database.h
+        )
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Build")
 add_executable(Biblioteka ${SOURCE_FILES})

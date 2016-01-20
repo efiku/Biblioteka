@@ -1,60 +1,55 @@
 #include <iostream>
-#include <vector>
 #include "Entity/Book.h"
+#include "Application/Application.h"
+#include "Application/Command.h"
 #include "Fixtures/BooksFixtures.h"
-#include "Storage/InMemoryStorage.h"
 
 using namespace Library;
 
-string asset(unsigned long a, unsigned long b) {
-    return (a == b ? " Passed \n" : " Failed \n");
-}
+void createFixtures(Database &);
 
-void coutbooks(const vector<Book> &Books) {
-    for (Book book : Books) {
-        cout << book.getId() << " " << book.getAuthor() << " " << book.getName() << " " << book.getPublishYear() <<
-        " \n";
+
+int main() {
+    Application application;
+    Command command;
+    Database database;
+    createFixtures(database);
+
+    application.run();
+    command.handle(database);
+
+    while (application.isIsRun()) {
+        system("clear");
+        cout <<
+        "Menu:\n"
+                "1. Wyświetl książki:\n"
+                "2. Dodaj książkę.\n"
+                "2. Edytuj ksiażkę.\n"
+                "3. Usuń książkę.\n"
+                "4. Wyjdź \n"
+                "Wybór: ";
+
+        int option;
+        cin >> option;
+        system("clear");
+        switch (option) {
+
+            case 1:
+                command.showBooks();
+                std::cin.get();
+                break;
+            case 4:
+                application.stop();
+                break;
+            default:
+                system("clear");
+                break;
+        }
+
+
     }
 }
 
-int main() {
-    setlocale(LC_ALL, "");
-    InMemoryStorage storage;
-
-    // tests
-    vector<Book> bookss = BooksFixtures::getFixturedBooks(10);
-    storage.save(bookss);
-    cout << "TEST [STORAGE SAVE] :: " << asset(storage.getBooksFromSource().size(), 10) << "\n";
-    coutbooks(storage.getBooksFromSource());
-    cin.get();
-
-    storage.remove(4);
-    cout << "TEST [STORAGE REMOVE] :: " << asset(storage.getBooksFromSource().size(), 9) << "\n";
-    coutbooks(storage.getBooksFromSource());
-    cin.get();
-
-    Book pacia = Book("Pacia na tropie", "Karol", 2015, "211-3144");
-    cout << "TEST [STORAGE UPDATE] :: " << asset(storage.update(3, pacia), 1) << "\n";
-    coutbooks(storage.getBooksFromSource());
-    cin.get();
-
-
-    cout << "TEST [STORAGE ADD] :: " << asset(storage.update(12, pacia), 0) << "\n";
-    coutbooks(storage.getBooksFromSource());
-    cin.get();
-
-
-    storage.reset();
-    cout << "TEST [STORAGE RESET] :: " << asset(storage.getBooksFromSource().size(), 0) <<
-    storage.getBooksFromSource().size() << "\n";
-    cin.get();
-
-
-    vector<Book> books = BooksFixtures::getFixturedBooks(20);
-    storage.save(books);
-    cout << "TEST [STORAGE SAVE] :: " << asset(storage.getBooksFromSource().size(), 20) << "\n";
-    coutbooks(storage.getBooksFromSource());
-    cin.get();
-    return 0;
-
+void createFixtures(Database &db) {
+    db.save(BooksFixtures::getFixturedBooks(10));
 }

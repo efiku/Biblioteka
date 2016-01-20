@@ -1,5 +1,4 @@
 #include "BooksFixtures.h"
-#include <time.h>
 
 namespace Library {
 
@@ -22,7 +21,7 @@ namespace Library {
         isbns = self.makeISBNS();
 
         vector<Book> preparedBooks;
-        for (unsigned long index = 0; index < numberOfBooks; index++) {
+        for (unsigned int index = 0; index < numberOfBooks; index++) {
             preparedBooks.push_back(
                     Book(
                             names[rand() % names.size()],
