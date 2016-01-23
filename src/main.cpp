@@ -13,17 +13,17 @@ int main() {
     Application application;
     Command command;
     Database database;
-    createFixtures(database);
+    //createFixtures(database);
 
     application.run();
     command.handle(database);
 
     while (application.isIsRun()) {
         system("clear");
+        command.showBooks();
         cout <<
         "Menu:\n"
-                "1. Wyświetl książki:\n"
-                "2. Dodaj książkę.\n"
+                "1. Dodaj książkę.\n"
                 "2. Edytuj ksiażkę.\n"
                 "3. Usuń książkę.\n"
                 "4. Wyjdź \n"
@@ -35,9 +35,16 @@ int main() {
         switch (option) {
 
             case 1:
-                command.showBooks();
+                command.addBook();
                 std::cin.get();
                 break;
+            case 2:
+                command.editBook();
+                break;
+            case 3:
+                command.removeBook();
+                break;
+
             case 4:
                 application.stop();
                 break;

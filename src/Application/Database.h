@@ -13,15 +13,15 @@ using namespace Library;
 class Database {
 
 private:
-    vector<Book> booksCollection;
+    vector <Book> booksCollection;
 
 public:
-    bool save(vector<Book> books) {
+    bool save(vector <Book> books) {
         booksCollection = books;
         return true;
     }
 
-    vector<Book> read() {
+    vector <Book> read() {
         return booksCollection;
     }
 };

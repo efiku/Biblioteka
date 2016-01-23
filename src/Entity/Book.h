@@ -21,6 +21,22 @@ namespace Library {
 
         string getISBN();
 
+        void setBookIsbn(const string &bookIsbn) {
+            Book::bookIsbn = bookIsbn;
+        }
+
+        void setBookPublishYear(unsigned int bookPublishYear) {
+            Book::bookPublishYear = bookPublishYear;
+        }
+
+        void setBookName(const string &bookName) {
+            Book::bookName = bookName;
+        }
+
+        void setBookAuthor(const string &bookAuthor) {
+            Book::bookAuthor = bookAuthor;
+        }
+
         unsigned int getPublishYear();
 
     private:
